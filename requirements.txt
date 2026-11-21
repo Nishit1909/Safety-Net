@@ -1,5 +1,7 @@
+langgraph
 groq
 google-genai
-python-dotenv
 pydantic
-tenacity
+python-dotenv
+scikit-learn
+pytest

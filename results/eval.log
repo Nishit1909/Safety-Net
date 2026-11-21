@@ -1,0 +1,140 @@
+run 0 A1  expected=dismissed  multi=confirmed    baseline=confirmed    (7.1s)
+run 0 A2  expected=confirmed  multi=confirmed    baseline=confirmed    (9.5s)
+run 0 A3  expected=dismissed  multi=dismissed    baseline=dismissed    (54.1s)
+run 0 A4  expected=dismissed  multi=dismissed    baseline=dismissed    (41.2s)
+run 0 A5  expected=confirmed  multi=confirmed    baseline=confirmed    (34.8s)
+run 0 B1  expected=confirmed  multi=confirmed    baseline=confirmed    (22.7s)
+run 0 B2  expected=confirmed  multi=confirmed    baseline=confirmed    (40.3s)
+run 0 B3  expected=dismissed  multi=dismissed    baseline=dismissed    (44.3s)
+run 0 B4  expected=confirmed  multi=confirmed    baseline=confirmed    (22.4s)
+run 0 B5  expected=confirmed  multi=confirmed    baseline=confirmed    (29.0s)
+run 0 C1  expected=confirmed  multi=confirmed    baseline=confirmed    (39.6s)
+run 0 C2  expected=confirmed  multi=confirmed    baseline=confirmed    (69.8s)
+run 0 C3  expected=confirmed  multi=confirmed    baseline=confirmed    (39.2s)
+run 0 C4  expected=dismissed  multi=dismissed    baseline=dismissed    (51.5s)
+run 0 C5  expected=dismissed  multi=confirmed    baseline=dismissed    (76.0s)
+run 1 A1  expected=dismissed  multi=confirmed    baseline=confirmed    (48.4s)
+run 1 A2  expected=confirmed  multi=error        baseline=confirmed    (52.7s)
+run 1 A3  expected=dismissed  multi=error        baseline=dismissed    (53.0s)
+run 1 A4  expected=dismissed  multi=error        baseline=dismissed    (53.1s)
+run 1 A5  expected=confirmed  multi=error        baseline=confirmed    (52.9s)
+run 1 B1  expected=confirmed  multi=error        baseline=confirmed    (52.8s)
+run 1 B2  expected=confirmed  multi=error        baseline=confirmed    (54.0s)
+run 1 B3  expected=dismissed  multi=error        baseline=dismissed    (52.7s)
+run 1 B4  expected=confirmed  multi=error        baseline=confirmed    (52.7s)
+run 1 B5  expected=confirmed  multi=error        baseline=confirmed    (53.1s)
+run 1 C1  expected=confirmed  multi=error        baseline=confirmed    (53.4s)
+run 1 C2  expected=confirmed  multi=error        baseline=confirmed    (53.7s)
+run 1 C3  expected=confirmed  multi=error        baseline=confirmed    (52.8s)
+run 1 C4  expected=dismissed  multi=error        baseline=dismissed    (53.6s)
+run 1 C5  expected=dismissed  multi=error        baseline=error        (102.7s)
+run 2 A1  expected=dismissed  multi=error        baseline=error        (102.6s)
+run 2 A2  expected=confirmed  multi=error        baseline=error        (103.5s)
+run 2 A3  expected=dismissed  multi=error        baseline=dismissed    (101.2s)
+run 2 A4  expected=dismissed  multi=error        baseline=error        (106.3s)
+run 2 A5  expected=confirmed  multi=error        baseline=confirmed    (103.6s)
+run 2 B1  expected=confirmed  multi=error        baseline=error        (102.9s)
+run 2 B2  expected=confirmed  multi=error        baseline=error        (102.6s)
+run 2 B3  expected=dismissed  multi=error        baseline=error        (102.6s)
+run 2 B4  expected=confirmed  multi=error        baseline=error        (102.9s)
+run 2 B5  expected=confirmed  multi=error        baseline=error        (103.0s)
+run 2 C1  expected=confirmed  multi=error        baseline=error        (102.8s)
+run 2 C2  expected=confirmed  multi=error        baseline=error        (102.8s)
+run 2 C3  expected=confirmed  multi=error        baseline=confirmed    (53.8s)
+run 2 C4  expected=dismissed  multi=error        baseline=error        (102.5s)
+run 2 C5  expected=dismissed  multi=error        baseline=error        (102.8s)
+
+{
+  "multi_agent": {
+    "accuracy": {
+      "mean": 0.289,
+      "min": 0.0,
+      "max": 0.8666666666666667
+    },
+    "false_positives": {
+      "mean": 1,
+      "min": 0,
+      "max": 2
+    },
+    "missed_gaps": {
+      "mean": 6,
+      "min": 0,
+      "max": 9
+    },
+    "by_type_per_run": [
+      {
+        "conflicting_evidence": "5/7",
+        "simple": "6/6",
+        "cross_document": "2/2"
+      },
+      {
+        "conflicting_evidence": "0/7",
+        "simple": "0/6",
+        "cross_document": "0/2"
+      },
+      {
+        "conflicting_evidence": "0/7",
+        "simple": "0/6",
+        "cross_document": "0/2"
+      }
+    ]
+  },
+  "single_agent_baseline": {
+    "accuracy": {
+      "mean": 0.667,
+      "min": 0.2,
+      "max": 0.9333333333333333
+    },
+    "false_positives": {
+      "mean": 0.667,
+      "min": 0,
+      "max": 1
+    },
+    "missed_gaps": {
+      "mean": 2.333,
+      "min": 0,
+      "max": 7
+    },
+    "by_type_per_run": [
+      {
+        "conflicting_evidence": "6/7",
+        "simple": "6/6",
+        "cross_document": "2/2"
+      },
+      {
+        "conflicting_evidence": "5/7",
+        "simple": "6/6",
+        "cross_document": "2/2"
+      },
+      {
+        "conflicting_evidence": "1/7",
+        "simple": "2/6",
+        "cross_document": "0/2"
+      }
+    ]
+  },
+  "retrieval_recall_of_key_evidence": 1.0,
+  "calls_by_agent": {
+    "checker": {
+      "calls": 16,
+      "tokens": 39229
+    },
+    "flagger": {
+      "calls": 20,
+      "tokens": 67266
+    },
+    "resolver": {
+      "calls": 16,
+      "tokens": 38366
+    },
+    "baseline": {
+      "calls": 32,
+      "tokens": 61026
+    }
+  },
+  "providers_used": {
+    "groq": 68,
+    "groq-retry": 6,
+    "gemini": 10
+  }
+}

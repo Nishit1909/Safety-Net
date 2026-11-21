@@ -1,0 +1,10 @@
+{
+  "persona_id": "persona_c", "synthetic": true, "age": 38,
+  "occupation": "Salaried, IT services", "dependents": 3,
+  "monthly_income": 180000,
+  "monthly_expenses": {"household": 40000, "home_loan_emi": 50000},
+  "liquid_assets": {"savings_account": 500000},
+  "locked_assets": {"fixed_deposit": {"amount": 300000, "premature_withdrawal_penalty_pct": 1.0}},
+  "obligations": {"home_loan_outstanding": 6000000, "home_loan_tenure_remaining_months": 180},
+  "documents": ["health_policy.md", "term_policy.md", "loan_agreement.md"]
+}

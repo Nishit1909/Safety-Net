@@ -1,0 +1,1177 @@
+[
+  {
+    "run": 0,
+    "case_id": "A1",
+    "expected": "dismissed",
+    "baseline": "confirmed",
+    "scenario": "A road accident leaves the earning member unable to work for 10 months.",
+    "flagger": {
+      "position": "gap",
+      "argument": "The Accidental Disability Income Rider in the Term Life Insurance Policy TL\u2011A\u20110001 has a 90\u2011day waiting period (Clause\u202f5.3). In the scenario where the earning member is disabled for 10\u202fmonths, the first 3\u202fmonths of loss of income will not be covered, creating a coverage gap. Moreover, the rider does not guarantee that the monthly benefit will equal the member\u2019s net income of Rs\u202f50,000, so even after the waiting period there may still be a shortfall. These facts together demonstrate a financial coverage gap.",
+      "citations": [
+        {
+          "ref": "term_policy.md#5.3",
+          "quote": "5.3 The monthly benefit commences after a waiting period of 90 days from the date of the Accident."
+        }
+      ]
+    },
+    "checker": {
+      "position": "gap",
+      "argument": "The accidental disability income rider attached to the term life policy pays Rs\u202f60,000 per month only after a 90\u2011day waiting period and for a maximum of 24 months. The earning member is disabled for 10 months, so the rider would cover only 7 of those months, leaving a 3\u2011month gap in income. No other policy in the profile provides income protection for the remaining period, so coverage is insufficient.",
+      "citations": [
+        {
+          "ref": "term_policy.md#5.3",
+          "quote": "The monthly benefit commences after a waiting period of 90 days from the date of the Accident."
+        },
+        {
+          "ref": "term_policy.md#5.4",
+          "quote": "The monthly benefit is payable for the duration of the Temporary Total Disability, up to a maximum of 24 months."
+        },
+        {
+          "ref": "term_policy.md#5.2",
+          "quote": "On Temporary Total Disability arising from an Accident, the Insurer will pay a monthly benefit of Rs 60,000."
+        },
+        {
+          "ref": "term_policy.md#5.5",
+          "quote": "This rider does not cover loss of income due to illness, resignation, termination of employment, or any cause other than an Accident."
+        }
+      ]
+    },
+    "dropped_citations": {
+      "flagger": [],
+      "checker": []
+    },
+    "verdict": "confirmed",
+    "ruling": {
+      "verdict": "confirmed",
+      "justification": "The Accidental Disability Income Rider only starts paying after a 90\u2011day waiting period (Clause\u202f5.3) and provides Rs\u202f60,000 per month thereafter (Clause\u202f5.2) for up to 24 months (Clause\u202f5.4). The earning member is disabled for 10\u202fmonths, so the first 3\u202fmonths receive no benefit, creating an income gap despite the later benefit exceeding the net income need. No other policy supplies income protection for this period, confirming a coverage gap.",
+      "decisive_refs": [
+        "term_policy.md#5.3",
+        "term_policy.md#5.2",
+        "term_policy.md#5.4"
+      ]
+    }
+  },
+  {
+    "run": 0,
+    "case_id": "A2",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "scenario": "The earning member's employment is terminated and they have no income for 8 months.",
+    "flagger": {
+      "position": "gap",
+      "argument": "The only income protection available to the policyholder is the Accidental Disability Income Rider of the Term Life Insurance Policy TL\u2011A\u20110001.  Clause 5.3 establishes a 90\u2011day waiting period before any benefit is paid, and Clause 5.5 explicitly states that the rider does not cover loss of income due to illness, resignation, termination of employment, or any cause other than an Accident.  Consequently, when the earning member\u2019s employment is terminated and they have no income for eight months, the rider provides no benefit.  The Health Insurance Policy HF\u2011A\u20110001 excludes loss of income during hospitalisation (Clause 6.1) but does not cover unemployment, and the Home Loan Agreement HL\u2011A\u20110001 only advises (Clause 7.1) that the borrower maintain life insurance; it does not provide any coverage for loan repayment in the event of unemployment.  Therefore, the policy suite fails to meet the financial obligations of the policyholder during the eight\u2011month period of unemployment, creating a clear coverage gap.",
+      "citations": [
+        {
+          "ref": "term_policy.md#5.3",
+          "quote": "The monthly benefit commences after a waiting period of 90 days from the date of the Accident."
+        },
+        {
+          "ref": "term_policy.md#5.5",
+          "quote": "This rider does not cover loss of income due to illness, resignation, termination of employment, or any cause other than an Accident."
+        },
+        {
+          "ref": "health_policy.md#6.1",
+          "quote": "Loss of income, salary or wages during hospitalisation or recovery is not covered."
+        },
+        {
+          "ref": "loan_agreement.md#7.1",
+          "quote": "The Borrower is advised, but not required, to maintain life insurance adequate to cover the outstanding loan."
+        }
+      ]
+    },
+    "checker": {
+      "position": "gap",
+      "argument": "The only rider attached to the base policy is the Accidental Disability Income Rider, which explicitly excludes loss of income due to resignation, termination of employment, or any cause other than an Accident (see clause 5.5). Therefore, the 8\u2011month period of unemployment following termination is not covered by any rider or policy excerpt provided. No other policy or rider in the scenario offers income replacement for this circumstance, leaving a coverage gap.",
+      "citations": [
+        {
+          "ref": "term_policy.md#5.5",
+          "quote": "This rider does not cover loss of income due to illness, resignation, termination of employment, or any cause other than an Accident."
+        },
+        {
+          "ref": "term_policy.md#5.1",
+          "quote": "This rider is in force and attached to the base policy."
+        }
+      ]
+    },
+    "dropped_citations": {
+      "flagger": [],
+      "checker": []
+    },
+    "verdict": "confirmed",
+    "ruling": {
+      "verdict": "confirmed",
+      "justification": "The Accidental Disability Income Rider is the only income\u2011protection benefit, but clause 5.5 explicitly excludes loss of income due to termination of employment, and the 90\u2011day waiting period in clause 5.3 would not apply because the cause is not an accident. The health policy (clause 6.1) excludes loss of income during hospitalization and does not cover unemployment. The home loan agreement (clause 7.1) only advises maintaining life insurance and provides no unemployment or income\u2011replacement benefit. Consequently, no policy or rider provides income replacement for the eight\u2011month unemployment, confirming a coverage gap.",
+      "decisive_refs": [
+        "term_policy.md#5.5",
+        "health_policy.md#6.1",
+        "loan_agreement.md#7.1"
+      ]
+    }
+  },
+  {
+    "run": 0,
+    "case_id": "A3",
+    "expected": "dismissed",
+    "baseline": "dismissed",
+    "scenario": "Death of the earning member.",
+    "flagger": {
+      "position": "no_gap",
+      "argument": "The term life policy provides a sum assured of Rs 1 crore, which exceeds the outstanding home loan of Rs 40,00,000 and covers the monthly outgo of Rs 70,000 for the dependents. The policy has no exclusion for death except suicide within 12 months, which does not apply. The borrower is not required to maintain life insurance, so the policy is not subject to any additional obligations. Therefore, there is no coverage gap.",
+      "citations": [
+        {
+          "ref": "term_policy.md#3.1",
+          "quote": "The Sum Assured payable on death of the Life Assured during the policy term is Rs 1,00,00,000 (One Crore), payable to the nominee."
+        },
+        {
+          "ref": "loan_agreement.md#2.2",
+          "quote": "Outstanding principal as on statement date: Rs 40,00,000."
+        },
+        {
+          "ref": "loan_agreement.md#2.3",
+          "quote": "Equated Monthly Instalment (EMI): Rs 35,000."
+        },
+        {
+          "ref": "loan_agreement.md#7.1",
+          "quote": "The Borrower is advised, but not required, to maintain life insurance adequate to cover the outstanding loan."
+        },
+        {
+          "ref": "term_policy.md#4.1",
+          "quote": "Death due to suicide within 12 months of commencement is excluded."
+        }
+      ]
+    },
+    "checker": {
+      "position": "no_gap",
+      "argument": "The Term Life Insurance Policy TL\u2011A\u20110001 provides a death benefit of Rs\u202f1\u202fCrore (Clause\u202f3.1) which fully covers the outstanding home loan of Rs\u202f40\u202fLakhs (Clause\u202f7.1 of the loan agreement) and leaves a substantial surplus for the dependents\u2019 future expenses. The policy term of 30\u202fyears (Clause\u202f3.2) ensures coverage until the insured reaches 64\u202fyears, well beyond the current age of 34. No exclusion applies to a natural death; the only exclusion is suicide within 12\u202fmonths of commencement (Clause\u202f4.1), which is not relevant to the scenario. Additionally, the insured\u2019s liquid assets of Rs\u202f3\u202fLakhs and the breakable locked assets (FD\u202fRs\u202f2\u202fLakhs, PPF\u202fRs\u202f4\u202fLakhs) provide a combined runway of 7.1\u202fmonths, sufficient to bridge any short\u2011term cash\u2011flow gaps until the death benefit is paid. Therefore, the existing policy, together with the available assets, adequately covers the obligations and expenses in the event of the earning member\u2019s death.",
+      "citations": [
+        {
+          "ref": "term_policy.md#3.1",
+          "quote": "The Sum Assured payable on death of the Life Assured during the policy term is Rs 1,00,00,000 (One Crore), payable to the nominee."
+        },
+        {
+          "ref": "loan_agreement.md#7.1",
+          "quote": "The Borrower is advised, but not required, to maintain life insurance adequate to cover the outstanding loan."
+        },
+        {
+          "ref": "loan_agreement.md#6.2",
+          "quote": "On default, the Lender may recall the entire outstanding amount and initiate recovery against the mortgaged property."
+        },
+        {
+          "ref": "term_policy.md#3.2",
+          "quote": "The policy term is 30 years from the commencement date."
+        },
+        {
+          "ref": "term_policy.md#4.1",
+          "quote": "Death due to suicide within 12 months of commencement is excluded."
+        }
+      ]
+    },
+    "dropped_citations": {
+      "flagger": [],
+      "checker": []
+    },
+    "verdict": "dismissed",
+    "ruling": {
+      "verdict": "dismissed",
+      "justification": "The Term Life Insurance Policy TL\u2011A\u20110001 provides a death benefit of Rs\u202f1\u202fCrore (Clause\u202f3.1), which exceeds the outstanding home\u2011loan principal of Rs\u202f40,00,000 (Clause\u202f2.2) and is sufficient to meet the family\u2019s monthly outgo of Rs\u202f70,000. The only exclusion is suicide within 12\u202fmonths (Clause\u202f4.1), which does not apply to a natural death scenario. Therefore the policy fully covers the obligations arising from the earning member\u2019s death, indicating no coverage gap.",
+      "decisive_refs": [
+        "term_policy.md#3.1",
+        "term_policy.md#4.1",
+        "loan_agreement.md#2.2"
+      ]
+    }
+  },
+  {
+    "run": 0,
+    "case_id": "A4",
+    "expected": "dismissed",
+    "baseline": "dismissed",
+    "scenario": "A child is hospitalised for 5 days for pneumonia; total bill Rs 4,00,000 in a room costing Rs 8,000 per day.",
+    "flagger": {
+      "position": "gap",
+      "argument": "The policy only covers room rent up to Rs 10,000 per day. The child's hospitalization incurred a total bill of Rs 4,00,000, but only the room rent (Rs 8,000 per day) is covered. The policy does not cover other expenses, creating a coverage gap.",
+      "citations": [
+        {
+          "ref": "health_policy.md#4.1",
+          "quote": "4.1 Room rent is covered up to 1% of the Sum Insured per day (Rs 10,000 per day)."
+        }
+      ]
+    },
+    "checker": {
+      "position": "no_gap",
+      "argument": "The Family Floater Health Insurance policy covers both the room rent and the total hospitalization bill for the child. Clause 4.1 confirms that room rent is covered up to Rs\u202f10,000 per day, which exceeds the child\u2019s daily cost of Rs\u202f8,000. Clause 3.1 states that in\u2011patient hospitalization expenses for at least 24\u202fhours are covered up to the Sum Insured, and the Sum Insured per policy year is Rs\u202f10,00,000 (Clause 2.1), which comfortably exceeds the total bill of Rs\u202f4,00,000. No exclusions are indicated for pneumonia or for the duration of stay, so the coverage applies fully.",
+      "citations": [
+        {
+          "ref": "health_policy.md#4.1",
+          "quote": "Room rent is covered up to 1% of the Sum Insured per day (Rs 10,000 per day)."
+        },
+        {
+          "ref": "health_policy.md#3.1",
+          "quote": "In-patient hospitalisation expenses for a minimum of 24 hours are covered up to the Sum Insured."
+        },
+        {
+          "ref": "health_policy.md#2.1",
+          "quote": "The Sum Insured is Rs 10,00,000 per policy year, shared across policyholder, spouse and two children."
+        }
+      ]
+    },
+    "dropped_citations": {
+      "flagger": [],
+      "checker": []
+    },
+    "verdict": "dismissed",
+    "ruling": {
+      "verdict": "dismissed",
+      "justification": "Clause 3.1 of the Family Floater Health Insurance policy states that in\u2011patient hospitalisation expenses (minimum 24\u202fhours) are covered up to the Sum Insured. Clause 2.1 sets the Sum Insured at Rs\u202f10,00,000 per policy year, which exceeds the child\u2019s total bill of Rs\u202f4,00,000. Clause 4.1 confirms that room\u2011rent is covered up to Rs\u202f10,000 per day, which also covers the Rs\u202f8,000 daily charge. No exclusion for pneumonia or the length of stay is present, so the policy fully covers the hospitalization cost, eliminating a coverage gap.",
+      "decisive_refs": [
+        "health_policy.md#3.1",
+        "health_policy.md#2.1",
+        "health_policy.md#4.1"
+      ]
+    }
+  },
+  {
+    "run": 0,
+    "case_id": "A5",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "scenario": "A serious illness (not an accident) keeps the earning member off work with no salary for 9 months.",
+    "flagger": {
+      "position": "gap",
+      "argument": "Under the scenario of a 9\u2011month illness, the policy suite provides no income replacement. The accidental disability rider (Clause 5.3) only pays after a 90\u2011day waiting period and is limited to accidents (Clause 5.5). The health policy explicitly excludes loss of income during hospitalization or recovery (Clause 6.1). Consequently, the insured would have to rely solely on liquid and breakable assets, which cover only 4.3\u20137.1 months, insufficient for the 9\u2011month period. The home loan agreement (Clauses 6.1, 6.2) imposes a default if three consecutive EMIs are missed, and the lender may recall the loan. The borrower is only advised (Clause 7.1) to maintain life insurance, not required. Therefore, there is a clear financial coverage gap.",
+      "citations": [
+        {
+          "ref": "term_policy.md#5.3",
+          "quote": "5.3 The monthly benefit commences after a waiting period of 90 days from the date of the Accident."
+        },
+        {
+          "ref": "term_policy.md#5.5",
+          "quote": "5.5 This rider does not cover loss of income due to illness, resignation, termination of employment, or any cause other than an Accident."
+        },
+        {
+          "ref": "health_policy.md#6.1",
+          "quote": "6.1 Loss of income, salary or wages during hospitalisation or recovery is not covered."
+        },
+        {
+          "ref": "health_policy.md#6.2",
+          "quote": "6.2 Pre-existing diseases are covered only after 36 months of continuous coverage."
+        },
+        {
+          "ref": "loan_agreement.md#6.1",
+          "quote": "6.1 Non-payment of three consecutive EMIs shall constitute an event of default."
+        },
+        {
+          "ref": "loan_agreement.md#6.2",
+          "quote": "6.2 On default, the Lender may recall the entire outstanding amount and initiate recovery against the mortgaged property."
+        },
+        {
+          "ref": "loan_agreement.md#7.1",
+          "quote": "7.1 The Borrower is advised, but not required, to maintain life insurance adequate to cover the outstanding loan."
+        }
+      ]
+    },
+    "checker": {
+      "position": "gap",
+      "argument": "The only rider attached to the term life policy is an Accidental Disability Income Rider, which explicitly excludes coverage for loss of income due to illness or any cause other than an accident (see clause 5.5). The health insurance policy also excludes loss of income during hospitalization or recovery (clause 6.1). No other policy or rider in the provided documents offers income protection for a serious illness that keeps the earning member off work for nine months. Therefore, there is a coverage gap for the scenario described.",
+      "citations": [
+        {
+          "ref": "term_policy.md#5.5",
+          "quote": "This rider does not cover loss of income due to illness, resignation, termination of employment, or any cause other than an Accident."
+        },
+        {
+          "ref": "health_policy.md#6.1",
+          "quote": "Loss of income, salary or wages during hospitalisation or recovery is not covered."
+        }
+      ]
+    },
+    "dropped_citations": {
+      "flagger": [],
+      "checker": []
+    },
+    "verdict": "confirmed",
+    "ruling": {
+      "verdict": "confirmed",
+      "justification": "The accidental disability rider only pays for accidents and explicitly excludes loss of income due to illness (clause 5.5). The health policy also excludes any loss of income during hospitalization or recovery (clause 6.1). No other policy or rider provides income replacement for a serious illness lasting nine months, so the insured would have no income protection, confirming a coverage gap.",
+      "decisive_refs": [
+        "term_policy.md#5.5",
+        "health_policy.md#6.1"
+      ]
+    }
+  },
+  {
+    "run": 0,
+    "case_id": "B1",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "scenario": "Hospitalisation for a complication of the person's pre-existing diabetes; total bill Rs 8,00,000.",
+    "flagger": {
+      "position": "gap",
+      "argument": "The hospitalization is for a complication of the insured\u2019s pre\u2011existing Type\u202f2 diabetes, which was declared at proposal. Clause\u202f6.2 of the health policy states that \"Pre\u2011existing diseases declared at proposal, and any complications arising from them, are covered only after 36 months of continuous coverage.\" The policy\u2019s continuous coverage as of the statement date is only 18 months (Clause\u202f1.2). Therefore the required 36\u2011month waiting period has not been met, and the policy does not cover the Rs\u202f8,00,000 hospitalization bill. The sum insured (Rs\u202f15,00,000) and coverage of in\u2011patient expenses (Clause\u202f3.1) are irrelevant because the pre\u2011existing condition exclusion applies first. Hence there is a coverage gap.",
+      "citations": [
+        {
+          "ref": "health_policy.md#6.2",
+          "quote": "Pre-existing diseases declared at proposal, and any complications arising from them, are covered only after 36 months of continuous coverage."
+        },
+        {
+          "ref": "health_policy.md#1.2",
+          "quote": "Continuous coverage under this policy as on statement date: 18 months."
+        },
+        {
+          "ref": "health_policy.md#1.1",
+          "quote": "Sum Insured: Rs 15,00,000 per policy year."
+        }
+      ]
+    },
+    "checker": {
+      "position": "gap",
+      "argument": "The hospitalization bill of Rs 8,00,000 for a complication of the policyholder\u2019s pre\u2011existing Type 2 diabetes is not covered because the policy\u2019s exclusion clause requires 36 months of continuous coverage before complications of pre\u2011existing diseases are paid. The policyholder has only 18 months of continuous coverage, so the claim would be denied. No riders or other policies provide coverage for this specific medical expense, and the health policy explicitly excludes loss of income and does not cover pre\u2011existing disease complications until the waiting period is satisfied.",
+      "citations": [
+        {
+          "ref": "health_policy.md#6.2",
+          "quote": "Pre-existing diseases declared at proposal, and any complications arising from them, are covered only after 36 months of continuous coverage."
+        },
+        {
+          "ref": "health_policy.md#1.2",
+          "quote": "Continuous coverage under this policy as on statement date: 18 months."
+        }
+      ]
+    },
+    "dropped_citations": {
+      "flagger": [],
+      "checker": []
+    },
+    "verdict": "confirmed",
+    "ruling": {
+      "verdict": "confirmed",
+      "justification": "Clause 6.2 states pre\u2011existing diseases declared at proposal and any complications arising from them are covered only after 36 months of continuous coverage. Clause 1.2 shows the policy has only 18 months of continuous coverage, so the complication of the insured\u2019s declared diabetes is excluded and the Rs\u202f8,00,000 hospitalisation bill is not covered.",
+      "decisive_refs": [
+        "health_policy.md#6.2",
+        "health_policy.md#1.2"
+      ]
+    }
+  },
+  {
+    "run": 0,
+    "case_id": "B2",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "scenario": "A road accident needs surgery; bill Rs 9,00,000 (of which Rs 1,00,000 is medicines), in a premium room costing Rs 25,000 per day.",
+    "flagger": {
+      "position": "gap",
+      "argument": "Under the policy, accidental injury is covered from day one (Clause 6.3). The sum insured is Rs 15,00,000 (Clause 1.1). Room rent limit is Rs 15,000 per day (Clause 4.1). The actual premium room rent is Rs 25,000, exceeding the limit. Clause 4.2 states that when the room rent exceeds the eligible limit, all associated medical expenses except medicines and consumables are paid in proportion to the eligible room rent relative to the actual rent. Thus only 60% (15,000/25,000) of the non\u2011medicine portion of the Rs 9,00,000 bill is covered. The medicine cost of Rs 1,00,000 is fully covered. Therefore the policy covers Rs 1,00,000 + 60% of Rs 8,00,000 = Rs 5,80,000, leaving a coverage gap of Rs 3,20,000. The pre\u2011existing diabetes declared at proposal does not affect coverage of the accidental injury, as it is not a complication of the pre\u2011existing disease (Clause 6.2 and 1.2).",
+      "citations": [
+        {
+          "ref": "health_policy.md#6.3",
+          "quote": "Expenses arising from accidental injury are covered from day one with no waiting period."
+        },
+        {
+          "ref": "health_policy.md#1.1",
+          "quote": "Sum Insured: Rs 15,00,000 per policy year."
+        }
+      ]
+    },
+    "checker": {
+      "position": "gap",
+      "argument": "The health policy covers in\u2011patient hospitalisation expenses, including surgery and ICU charges, up to the sum insured of Rs\u202f15,00,000 (Clause\u202f3.1). However, the policy limits room rent to 1\u202f% of the sum insured per day, i.e. Rs\u202f15,000 (Clause\u202f4.1). The actual premium room rent is Rs\u202f25,000 per day, exceeding the eligible limit. Clause\u202f4.2 states that when the room rent is higher than the eligible limit, all associated medical expenses (except medicines and consumables) are paid in the same proportion that the eligible room rent bears to the actual room rent. The eligible\u2011to\u2011actual proportion is 15,000/25,000\u202f=\u202f0.6, so only 60\u202f% of the non\u2011medicine portion of the bill (Rs\u202f8,00,000) is covered, amounting to Rs\u202f4,80,000. Medicines (Rs\u202f1,00,000) are excluded from coverage (Clause\u202f4.2). Thus the total covered amount is Rs\u202f4,80,000, far below the Rs\u202f9,00,000 bill. The policy does cover accidental injury expenses from day one (Clause\u202f6.3), but this does not compensate for the shortfall. Consequently, the coverage is insufficient for the scenario, creating a gap.",
+      "citations": [
+        {
+          "ref": "health_policy.md#4.1",
+          "quote": "Room rent is payable up to 1% of the Sum Insured per day (Rs 15,000 per day)."
+        },
+        {
+          "ref": "health_policy.md#4.2",
+          "quote": "If the insured occupies a room with rent higher than the eligible limit, all associated medical expenses (except medicines and consumables) are paid in the same proportion that the eligible room rent bears to the actual room rent."
+        },
+        {
+          "ref": "health_policy.md#3.1",
+          "quote": "In-patient hospitalisation expenses, including surgery and ICU charges, are covered up to the Sum Insured."
+        },
+        {
+          "ref": "health_policy.md#6.3",
+          "quote": "Expenses arising from accidental injury are covered from day one with no waiting period."
+        },
+        {
+          "ref": "health_policy.md#1.1",
+          "quote": "Sum Insured: Rs 15,00,000 per policy year."
+        }
+      ]
+    },
+    "dropped_citations": {
+      "flagger": [],
+      "checker": []
+    },
+    "verdict": "confirmed",
+    "ruling": {
+      "verdict": "confirmed",
+      "justification": "Clause\u202f4.1 caps room rent at Rs\u202f15,000 per day. The actual premium room rent is Rs\u202f25,000, so the eligible\u2011to\u2011actual proportion is 15,000/25,000\u202f=\u202f0.6. Clause\u202f4.2 states that for rooms exceeding the limit, all associated medical expenses *except medicines and consumables* are paid in that proportion. Therefore the non\u2011medicine portion of the Rs\u202f8,00,000 bill is covered at 60\u202f% (Rs\u202f4,80,000). Medicines are not subject to the proportionate deduction, so the Rs\u202f1,00,000 medicine cost is covered in full. Total covered amount = Rs\u202f4,80,000\u202f+\u202fRs\u202f1,00,000\u202f=\u202fRs\u202f5,80,000, leaving a shortfall of Rs\u202f3,20,000 against the Rs\u202f9,00,000 bill. Hence a coverage gap is confirmed.",
+      "decisive_refs": [
+        "health_policy.md#4.1",
+        "health_policy.md#4.2",
+        "health_policy.md#3.1",
+        "health_policy.md#6.3"
+      ]
+    }
+  },
+  {
+    "run": 0,
+    "case_id": "B3",
+    "expected": "dismissed",
+    "baseline": "dismissed",
+    "scenario": "Death of the earning member.",
+    "flagger": {
+      "position": "no_gap",
+      "argument": "The term life policy provides a sum assured of Rs 75,00,000 on the death of the life assured, which far exceeds the monthly outgo of Rs 50,000 and the liquid assets of Rs 200,000. No exclusions or waiting periods for death are indicated in the provided policy excerpts, so the policy fully covers the financial obligations in the event of the earning member\u2019s death.",
+      "citations": [
+        {
+          "ref": "term_policy.md#3.1",
+          "quote": "3.1 The Sum Assured payable to the nominee on death of the Life Assured is Rs 75,00,000."
+        }
+      ]
+    },
+    "checker": {
+      "position": "no_gap",
+      "argument": "The term life policy provides a death benefit of Rs 75,00,000, which far exceeds the monthly outgo of Rs 50,000, ensuring that the dependent is covered for many years. No riders or exclusions affect the death benefit, so the coverage is adequate.",
+      "citations": [
+        {
+          "ref": "term_policy.md#3.1",
+          "quote": "3.1 The Sum Assured payable to the nominee on death of the Life Assured is Rs 75,00,000."
+        },
+        {
+          "ref": "term_policy.md#5.1",
+          "quote": "5.1 No riders are attached to this policy. No disability or income benefit is payable under this policy."
+        }
+      ]
+    },
+    "dropped_citations": {
+      "flagger": [],
+      "checker": []
+    },
+    "verdict": "dismissed",
+    "ruling": {
+      "verdict": "dismissed",
+      "justification": "The term life policy explicitly provides a death benefit of Rs\u202f75,00,000 to the nominee, which far exceeds the monthly outgo of Rs\u202f50,000 and the liquid assets. No exclusions or waiting periods for death are mentioned, so the financial obligations of the dependent are fully covered in the event of the earning member\u2019s death.",
+      "decisive_refs": [
+        "term_policy.md#3.1",
+        "term_policy.md#5.1"
+      ]
+    }
+  },
+  {
+    "run": 0,
+    "case_id": "B4",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "scenario": "The consultant loses their main clients and has no income for 6 months.",
+    "flagger": {
+      "position": "gap",
+      "argument": "Under the current health and term life policies, there is no provision for loss of income or disability benefits. Clause 6.1 of the health policy explicitly states that loss of income is not covered, and clause 5.1 of the term life policy confirms that no riders, including disability or income benefits, are attached. Consequently, if the consultant loses all clients and has no income for six months, there is no financial coverage to bridge that period. Additionally, the health policy\u2019s pre\u2011existing disease clause (36\u2011month waiting period) does not mitigate the income gap. Therefore, a financial coverage gap exists.",
+      "citations": [
+        {
+          "ref": "health_policy.md#6.1",
+          "quote": "6.1 Loss of income is not covered."
+        },
+        {
+          "ref": "term_policy.md#5.1",
+          "quote": "5.1 No riders are attached to this policy. No disability or income benefit is payable under this policy."
+        },
+        {
+          "ref": "health_policy.md#6.2",
+          "quote": "6.2 Pre-existing diseases declared at proposal, and any complications arising from them, are covered only after 36 months of continuous coverage."
+        }
+      ]
+    },
+    "checker": {
+      "position": "gap",
+      "argument": "The scenario requires coverage for a 6\u2011month period of zero income due to loss of clients. The only policies in force are a term life insurance (TL-B-0002) and an individual health insurance (HI-B-0002). The term policy has no riders and explicitly states that no disability or income benefit is payable (<term_policy.md#5.1>). The health policy covers inpatient expenses but explicitly excludes loss of income (<health_policy.md#6.1>). Since neither policy provides a benefit that covers the loss of income for the required 6\u2011month period, there is a coverage gap.",
+      "citations": []
+    },
+    "dropped_citations": {
+      "flagger": [],
+      "checker": [
+        "<term_policy.md#5.1>",
+        "<health_policy.md#6.1>"
+      ]
+    },
+    "verdict": "confirmed",
+    "ruling": {
+      "verdict": "confirmed",
+      "justification": "Both the health policy explicitly excludes loss of income (clause 6.1) and the term life policy has no riders and does not provide disability or income benefits (clause 5.1). Therefore the scenario of six months of zero income is not covered, confirming a coverage gap.",
+      "decisive_refs": [
+        "health_policy.md#6.1",
+        "term_policy.md#5.1"
+      ]
+    }
+  },
+  {
+    "run": 0,
+    "case_id": "B5",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "scenario": "An accident leaves the person unable to work for 5 months; hospital bills are small and fully covered.",
+    "flagger": {
+      "position": "gap",
+      "argument": "The policy explicitly excludes loss of income (6.1). The accident leaves the insured unable to work for 5 months, creating a financial gap of Rs\u202f90,000\u202f\u00d7\u202f5\u202f=\u202fRs\u202f4,50,000 that is not covered. While hospital expenses are covered from day one (6.3), the policy does not provide any income replacement benefit. Therefore, under the scenario, the insured has a coverage gap.",
+      "citations": [
+        {
+          "ref": "health_policy.md#6.1",
+          "quote": "Loss of income is not covered."
+        },
+        {
+          "ref": "health_policy.md#6.3",
+          "quote": "Expenses arising from accidental injury are covered from day one with no waiting period."
+        }
+      ]
+    },
+    "checker": {
+      "position": "gap",
+      "argument": "The accident has caused a 5\u2011month loss of income, but none of the existing policies provide a benefit for loss of income. The term life policy has no disability or income benefit (see <term_policy.md#5.1>), and the health policy explicitly excludes loss of income coverage (see <health_policy.md#6.1>). Therefore, the person is not adequately covered for the 5\u2011month period of inability to work.",
+      "citations": [
+        {
+          "ref": "term_policy.md#5.1",
+          "quote": "5.1 No riders are attached to this policy. No disability or income benefit is payable under this policy."
+        },
+        {
+          "ref": "health_policy.md#6.1",
+          "quote": "6.1 Loss of income is not covered."
+        }
+      ]
+    },
+    "dropped_citations": {
+      "flagger": [],
+      "checker": []
+    },
+    "verdict": "confirmed",
+    "ruling": {
+      "verdict": "confirmed",
+      "justification": "The health policy explicitly excludes loss of income (6.1) and only covers medical expenses from accidental injury (6.3). The term life policy provides no disability or income benefit (5.1). Therefore the 5\u2011month loss of earnings is not covered, confirming a coverage gap.",
+      "decisive_refs": [
+        "health_policy.md#6.1",
+        "term_policy.md#5.1"
+      ]
+    }
+  },
+  {
+    "run": 0,
+    "case_id": "C1",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "scenario": "Death of the earning member.",
+    "flagger": {
+      "position": "gap",
+      "argument": "The term life policy provides a death benefit of Rs 50,00,000, which is less than the outstanding home loan principal of Rs 60,00,000. Moreover, the policy is absolutely assigned to the lender, so the benefit is paid to the lender, not to the family. Clause 7.3 ensures that any shortfall between the assigned proceeds and the outstanding principal is recoverable from the estate, leaving the family with a coverage gap. Therefore, the family faces a financial coverage gap upon the death of the earning member.",
+      "citations": [
+        {
+          "ref": "loan_agreement.md#7.1",
+          "quote": "The Borrower shall at all times maintain life insurance assigned to the Lender with a sum assured not less than the outstanding principal."
+        },
+        {
+          "ref": "loan_agreement.md#7.3",
+          "quote": "Any shortfall between the assigned insurance proceeds and the outstanding principal on the Borrower's death remains recoverable from the Borrower's estate and legal heirs."
+        },
+        {
+          "ref": "term_policy.md#6.1",
+          "quote": "This policy has been absolutely assigned to the home-loan lender under loan account HL-C-0003. Any death benefit is paid to the lender, not to the nominee."
+        },
+        {
+          "ref": "term_policy.md#3.1",
+          "quote": "The Sum Assured payable on death of the Life Assured is Rs 50,00,000."
+        },
+        {
+          "ref": "loan_agreement.md#2.1",
+          "quote": "Outstanding principal as on statement date: Rs 60,00,000."
+        }
+      ]
+    },
+    "checker": {
+      "position": "gap",
+      "argument": "The term life policy provides a sum assured of Rs\u202f5,000,000, but the outstanding home\u2011loan principal is Rs\u202f6,000,000. The policy is absolutely assigned to the lender, so the death benefit of Rs\u202f5,000,000 is paid to the lender, leaving a shortfall of Rs\u202f1,000,000 that must be recovered from the estate. Moreover, the death benefit is insufficient to cover the family\u2019s monthly expenses of Rs\u202f90,000, and the liquid assets plus breakable fixed deposit only provide a runway of 5.6 to 8.9 months, far short of the time required to settle the loan and sustain the dependents. Consequently, there is a coverage gap.",
+      "citations": [
+        {
+          "ref": "term_policy.md#3.1",
+          "quote": "The Sum Assured payable on death of the Life Assured is Rs 50,00,000."
+        },
+        {
+          "ref": "term_policy.md#6.1",
+          "quote": "This policy has been absolutely assigned to the home-loan lender under loan account HL-C-0003. Any death benefit is paid to the lender, not to the nominee."
+        },
+        {
+          "ref": "loan_agreement.md#7.1",
+          "quote": "The Borrower shall at all times maintain life insurance assigned to the Lender with a sum assured not less than the outstanding principal."
+        },
+        {
+          "ref": "loan_agreement.md#7.3",
+          "quote": "Any shortfall between the assigned insurance proceeds and the outstanding principal on the Borrower's death remains recoverable from the Borrower's estate and legal heirs."
+        }
+      ]
+    },
+    "dropped_citations": {
+      "flagger": [],
+      "checker": []
+    },
+    "verdict": "confirmed",
+    "ruling": {
+      "verdict": "confirmed",
+      "justification": "The term life policy\u2019s sum assured is Rs\u202f5,000,000 (term_policy.md#3.1) which is lower than the home\u2011loan outstanding principal of Rs\u202f6,000,000 (loan_agreement.md#2.1). The policy is absolutely assigned to the lender (term_policy.md#6.1), so the death benefit is paid to the lender, not to the family. Clause\u202f7.3 of the loan agreement states that any shortfall between the assigned insurance proceeds and the outstanding principal on the borrower\u2019s death is recoverable from the estate and legal heirs (loan_agreement.md#7.3). Consequently, the family would face a Rs\u202f1,000,000 shortfall on the loan and receives no direct benefit for their monthly expenses, confirming a coverage gap.",
+      "decisive_refs": [
+        "term_policy.md#3.1",
+        "term_policy.md#6.1",
+        "loan_agreement.md#2.1",
+        "loan_agreement.md#7.3"
+      ]
+    }
+  },
+  {
+    "run": 0,
+    "case_id": "C2",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "scenario": "The lender reviews whether the borrower complies with the insurance conditions of the home loan.",
+    "flagger": {
+      "position": "gap",
+      "argument": "Clause 7.1 of the loan agreement mandates that the borrower must maintain life insurance assigned to the lender with a sum assured not less than the outstanding principal of Rs 60,00,000 (see <loan_agreement.md#7.1>). The term life policy TL\u2011C\u20110003 is absolutely assigned to the lender under clause 6.1 of the policy (see <term_policy.md#6.1>), but the policy excerpt does not disclose a sum assured figure. Because the policy\u2019s sum assured is not documented as meeting the Rs 60,00,000 threshold, the borrower\u2019s coverage cannot be verified as compliant. Clause 7.3 further states that any shortfall between the assigned insurance proceeds and the outstanding principal on the borrower\u2019s death remains recoverable from the borrower\u2019s estate (see <loan_agreement.md#7.3>), implying that the insurance may be insufficient. Finally, clause 7.2 declares that failure to maintain the insurance required under clause 7.1 constitutes an event of default, allowing the lender to recall the entire outstanding amount (see <loan_agreement.md#7.2>). In the absence of evidence that the policy\u2019s sum assured meets the required Rs 60,00,000, the borrower fails to satisfy the insurance condition, creating a financial coverage gap.",
+      "citations": [
+        {
+          "ref": "loan_agreement.md#7.1",
+          "quote": "7.1 The Borrower shall at all times maintain life insurance assigned to the Lender with a sum assured not less than the outstanding principal."
+        },
+        {
+          "ref": "term_policy.md#6.1",
+          "quote": "6.1 This policy has been absolutely assigned to the home-loan lender under loan account HL-C-0003. Any death benefit is paid to the lender, not to the nominee."
+        },
+        {
+          "ref": "loan_agreement.md#7.3",
+          "quote": "7.3 Any shortfall between the assigned insurance proceeds and the outstanding principal on the Borrower's death remains recoverable from the Borrower's estate and legal heirs."
+        },
+        {
+          "ref": "loan_agreement.md#7.2",
+          "quote": "7.2 Failure to maintain the insurance required under Clause 7.1 shall constitute an event of default, and the Lender may recall the entire outstanding amount."
+        },
+        {
+          "ref": "loan_agreement.md#2.1",
+          "quote": "2.1 Outstanding principal as on statement date: Rs 60,00,000."
+        }
+      ]
+    },
+    "checker": {
+      "position": "gap",
+      "argument": "The home loan agreement mandates that the borrower maintain life insurance assigned to the lender with a sum assured not less than the outstanding principal. The outstanding principal for the home loan is Rs 6,000,000. However, the borrower's assigned Term Life Insurance Policy TL-C-0003 has a sum assured of Rs 5,000,000. This sum assured is less than the required outstanding principal, indicating a shortfall of Rs 1,000,000 and a failure to comply with the loan's insurance conditions.",
+      "citations": []
+    },
+    "dropped_citations": {
+      "flagger": [],
+      "checker": [
+        "<loan_agreement.md#7.1>",
+        "<term_policy.md#3.1>",
+        "<term_policy.md#6.1>",
+        "<loan_agreement.md#7.2>"
+      ]
+    },
+    "verdict": "confirmed",
+    "ruling": {
+      "verdict": "confirmed",
+      "justification": "Clause 7.1 of the loan agreement requires a life insurance sum assured not less than the outstanding principal of Rs 60,00,000 (loan_agreement.md#7.1, loan_agreement.md#2.1). The term policy TL\u2011C\u20110003 specifies a sum assured of Rs 50,00,000 (term_policy.md#3.1), which is Rs 10,00,000 short of the required amount, creating a coverage gap despite the policy being assigned to the lender (term_policy.md#6.1).",
+      "decisive_refs": [
+        "loan_agreement.md#7.1",
+        "loan_agreement.md#2.1",
+        "term_policy.md#3.1"
+      ]
+    }
+  },
+  {
+    "run": 0,
+    "case_id": "C3",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "scenario": "The earning member is laid off and has no income for 12 months.",
+    "flagger": {
+      "position": "gap",
+      "argument": "The individual faces a significant financial coverage gap due to the 12-month loss of income from being laid off. Firstly, there is no insurance coverage for this specific event. The Accidental Disability Income Rider explicitly excludes \"termination of employment\" (<term_policy.md#5.3>), and the Family Floater Health Insurance Policy states that \"Loss of income is not covered\" (<health_policy.md#6.1>). Secondly, the available assets are insufficient to cover the monthly outgo for the entire 12-month period. While the monthly outgo is Rs 90,000, the combined liquid and breakable locked assets provide a runway of only 8.9 months. This leaves a shortfall of 3.1 months of expenses, or Rs 279,000 (3.1 months * Rs 90,000/month). Consequently, the individual will be unable to meet their financial obligations, including the Rs 50,000 home loan EMI (<loan_agreement.md#2.2>), for the full 12 months. Non-payment of three consecutive EMIs constitutes an event of default (<loan_agreement.md#6.1>), which is highly probable given the projected shortfall in funds.",
+      "citations": [
+        {
+          "ref": "term_policy.md#5.3",
+          "quote": "This rider does not cover illness, resignation or termination of employment."
+        },
+        {
+          "ref": "health_policy.md#6.1",
+          "quote": "Loss of income is not covered."
+        },
+        {
+          "ref": "loan_agreement.md#2.2",
+          "quote": "Equated Monthly Instalment (EMI): Rs 50,000."
+        },
+        {
+          "ref": "loan_agreement.md#6.1",
+          "quote": "Non-payment of three consecutive EMIs shall constitute an event of default."
+        }
+      ]
+    },
+    "checker": {
+      "position": "gap",
+      "argument": "The earning member faces a 12-month period of no income due to layoff, with a monthly outgo of Rs 90,000. This requires coverage for Rs 1,080,000 (90,000 * 12) in expenses. Liquid assets of Rs 500,000 and breakable locked assets of Rs 300,000 provide a combined runway of 8.9 months, covering approximately Rs 801,000. This leaves a gap of 3.1 months, or Rs 279,000, in expenses. The Accidental Disability Income Rider under the Term Life Insurance Policy TL-C-0003 explicitly states, \"This rider does not cover illness, resignation or termination of employment.\" Since the scenario is a layoff (termination of employment), this rider does not apply. Furthermore, the Family Floater Health Insurance Policy HF-C-0003 clearly states, \"Loss of income is not covered.\" Therefore, no policy or rider provides income replacement for the layoff scenario, and the available assets are insufficient to cover the full 12-month period of expenses.",
+      "citations": [
+        {
+          "ref": "term_policy.md#5.3",
+          "quote": "This rider does not cover illness, resignation or termination of employment."
+        },
+        {
+          "ref": "health_policy.md#6.1",
+          "quote": "Loss of income is not covered."
+        }
+      ]
+    },
+    "dropped_citations": {
+      "flagger": [],
+      "checker": []
+    },
+    "verdict": "confirmed",
+    "ruling": {
+      "verdict": "confirmed",
+      "justification": "The Accidental Disability Income Rider only pays for temporary total disability caused by an accident, but clause 5.3 explicitly excludes termination of employment, so a layoff is not covered. The Family Floater Health Insurance policy\u2019s exclusion clause 6.1 states that loss of income is not covered. Therefore no policy provides income replacement for the 12\u2011month layoff, and the member\u2019s liquid and breakable assets only cover 8.9 months of expenses, leaving a shortfall. Hence a coverage gap exists.",
+      "decisive_refs": [
+        "term_policy.md#5.3",
+        "health_policy.md#6.1"
+      ]
+    }
+  },
+  {
+    "run": 0,
+    "case_id": "C4",
+    "expected": "dismissed",
+    "baseline": "dismissed",
+    "scenario": "Emergency appendicitis surgery; bill Rs 2,50,000 in a standard single room.",
+    "flagger": {
+      "position": "gap",
+      "argument": "The individual faces a significant financial coverage gap stemming from two critical areas. Firstly, there is a pre-existing shortfall in mandatory life insurance coverage for their home loan. The outstanding principal is Rs 60,00,000 (<loan_agreement.md#2.1>), yet the assigned life insurance sum assured is only Rs 50,00,000 (<term_policy.md#3.1>). This violates the loan agreement's requirement to maintain \"a sum assured not less than the outstanding principal\" (<loan_agreement.md#7.1>), constituting an event of default that could lead the Lender to \"recall the entire outstanding amount\" (<loan_agreement.md#7.2>). This Rs 10,00,000 coverage gap exposes the individual to immediate and severe financial risk.\n\nSecondly, while the emergency appendicitis surgery bill of Rs 2,50,000 is covered by the health policy for in-patient hospitalization and room rent (<health_policy.md#3.1>, <health_policy.md#4.1>), paying this amount from the individual's liquid assets (Rs 500,000) would reduce their available funds to Rs 250,000. With a monthly outgo of Rs 90,000 (including a Rs 50,000 EMI, <loan_agreement.md#2.2>), this leaves a financial runway of only 2.77 months. This falls below the critical threshold of three consecutive months of non-payment that \"shall constitute an event of default\" for the home loan (<loan_agreement.md#6.1>). This severely diminished liquidity creates a high risk of defaulting on loan obligations if income is disrupted even for a short period post-surgery, or if other unforeseen expenses arise, thus revealing a critical liquidity coverage gap exacerbated by the scenario.",
+      "citations": [
+        {
+          "ref": "loan_agreement.md#2.1",
+          "quote": "Outstanding principal as on statement date: Rs 60,00,000."
+        },
+        {
+          "ref": "term_policy.md#3.1",
+          "quote": "The Sum Assured payable on death of the Life Assured is Rs 50,00,000."
+        },
+        {
+          "ref": "loan_agreement.md#7.1",
+          "quote": "The Borrower shall at all times maintain life insurance assigned to the Lender with a sum assured not less than the outstanding principal."
+        },
+        {
+          "ref": "loan_agreement.md#7.2",
+          "quote": "Failure to maintain the insurance required under Clause 7.1 shall constitute an event of default, and the Lender may recall the entire outstanding amount."
+        },
+        {
+          "ref": "health_policy.md#3.1",
+          "quote": "In-patient hospitalisation, including surgery, is covered up to the Sum Insured."
+        },
+        {
+          "ref": "health_policy.md#4.1",
+          "quote": "Room rent is covered up to Rs 10,000 per day; a standard single room at the network hospital costs Rs 6,000 per day."
+        },
+        {
+          "ref": "loan_agreement.md#2.2",
+          "quote": "Equated Monthly Instalment (EMI): Rs 50,000."
+        },
+        {
+          "ref": "loan_agreement.md#6.1",
+          "quote": "Non-payment of three consecutive EMIs shall constitute an event of default."
+        }
+      ]
+    },
+    "checker": {
+      "position": "no_gap",
+      "argument": "The emergency appendicitis surgery bill of Rs 2,50,000 is adequately covered by the Family Floater Health Insurance Policy HF-C-0003. The policy covers in-patient hospitalisation, including surgery, up to a Sum Insured of Rs 10,00,000. Additionally, the room rent for a standard single room (Rs 6,000 per day) is also covered, as the policy allows up to Rs 10,000 per day.",
+      "citations": [
+        {
+          "ref": "health_policy.md#3.1",
+          "quote": "In-patient hospitalisation, including surgery, is covered up to the Sum Insured."
+        },
+        {
+          "ref": "health_policy.md#2.1",
+          "quote": "The Sum Insured is Rs 10,00,000 per policy year, shared across all four insured members."
+        },
+        {
+          "ref": "health_policy.md#4.1",
+          "quote": "Room rent is covered up to Rs 10,000 per day; a standard single room at the network hospital costs Rs 6,000 per day."
+        }
+      ]
+    },
+    "dropped_citations": {
+      "flagger": [],
+      "checker": []
+    },
+    "verdict": "dismissed",
+    "ruling": {
+      "verdict": "dismissed",
+      "justification": "The Family Floater Health Insurance Policy HF-C-0003 provides in\u2011patient hospitalisation and surgery coverage up to a Rs\u202f10,00,000 sum insured (health_policy.md#3.1) and covers room rent up to Rs\u202f10,000 per day (health_policy.md#4.1). A standard single room costs Rs\u202f6,000 per day, well within the limit, and the total bill of Rs\u202f2,50,000 is far below the Rs\u202f10,00,000 coverage ceiling, so the policy fully meets the scenario\u2019s need.",
+      "decisive_refs": [
+        "health_policy.md#3.1",
+        "health_policy.md#4.1",
+        "health_policy.md#2.1"
+      ]
+    }
+  },
+  {
+    "run": 0,
+    "case_id": "C5",
+    "expected": "dismissed",
+    "baseline": "dismissed",
+    "scenario": "An accident leaves the earning member unable to work for 6 months.",
+    "flagger": {
+      "position": "gap",
+      "argument": "The individual faces a significant financial coverage gap due to insufficient income replacement during the 6-month period of inability to work. While the Accidental Disability Income Rider provides a monthly benefit of Rs 90,000, this only replaces 50% of the individual's actual monthly income of Rs 180,000. This means that for 5 out of the 6 months, Rs 90,000 of income is not replaced, eliminating any surplus for savings, investments, or discretionary spending that the individual would normally have. Furthermore, the rider includes a 30-day waiting period, meaning no benefit is paid for the first month of disability. During this initial month, the entire monthly outgo of Rs 90,000 must be covered by the individual's liquid assets, further depleting their financial buffer. This combination of partial income replacement and an initial waiting period constitutes a clear financial coverage gap, impacting the individual's ability to maintain their pre-disability financial stability and absorb unforeseen expenses.",
+      "citations": [
+        {
+          "ref": "term_policy.md#5.1",
+          "quote": "On Temporary Total Disability caused by an Accident, the Insurer pays a monthly benefit of Rs 90,000."
+        },
+        {
+          "ref": "term_policy.md#5.2",
+          "quote": "The monthly benefit commences after a waiting period of 30 days from the date of the Accident and is payable for up to 12 months."
+        },
+        {
+          "ref": "health_policy.md#6.1",
+          "quote": "Loss of income is not covered."
+        }
+      ]
+    },
+    "checker": {
+      "position": "no_gap",
+      "argument": "The scenario describes an accident leaving the earning member unable to work for 6 months, with a monthly outgo of Rs 90,000. The Term Life Insurance Policy TL-C-0003 includes an Accidental Disability Income Rider. This rider pays a monthly benefit of Rs 90,000 for \"Temporary Total Disability caused by an Accident\", which directly applies to the scenario. The benefit commences after a 30-day waiting period and is payable for up to 12 months. For the 6-month period of inability to work, the first month's outgo of Rs 90,000 will need to be covered by other means due to the waiting period. For the subsequent 5 months, the rider will pay Rs 90,000 per month, fully covering the monthly outgo. The individual has liquid assets of Rs 500,000 in a savings account, which is more than sufficient to cover the Rs 90,000 required for the waiting period. Therefore, the individual is adequately covered.",
+      "citations": [
+        {
+          "ref": "loan_agreement.md#2.2",
+          "quote": "Equated Monthly Instalment (EMI): Rs 50,000."
+        },
+        {
+          "ref": "term_policy.md#5.1",
+          "quote": "On Temporary Total Disability caused by an Accident, the Insurer pays a monthly benefit of Rs 90,000."
+        },
+        {
+          "ref": "term_policy.md#5.2",
+          "quote": "The monthly benefit commences after a waiting period of 30 days from the date of the Accident and is payable for up to 12 months."
+        },
+        {
+          "ref": "term_policy.md#5.3",
+          "quote": "This rider does not cover illness, resignation or termination of employment."
+        }
+      ]
+    },
+    "dropped_citations": {
+      "flagger": [],
+      "checker": []
+    },
+    "verdict": "confirmed",
+    "ruling": {
+      "verdict": "confirmed",
+      "justification": "The Accidental Disability Income Rider provides a monthly benefit of Rs\u202f90,000 for Temporary Total Disability caused by an accident (term_policy.md#5.1) but only after a 30\u2011day waiting period (term_policy.md#5.2). Consequently, the first month of the 6\u2011month disability period receives no income benefit, creating a coverage gap for that month. No other policy covers loss of income (health_policy.md#6.1), so the gap is not offset by any other coverage.",
+      "decisive_refs": [
+        "term_policy.md#5.1",
+        "term_policy.md#5.2",
+        "health_policy.md#6.1"
+      ]
+    }
+  },
+  {
+    "run": 1,
+    "case_id": "A1",
+    "expected": "dismissed",
+    "baseline": "confirmed",
+    "scenario": "A road accident leaves the earning member unable to work for 10 months.",
+    "flagger": {
+      "position": "gap",
+      "argument": "The individual faces a significant financial coverage gap for the 10-month period they are unable to work. Their total monthly outgo is Rs 70,000, which includes a Rs 35,000 home loan EMI. Over 10 months, this amounts to a total need of Rs 700,000. While the individual has Rs 300,000 in liquid assets and Rs 200,000 in breakable locked assets (Fixed Deposit), these combined assets only provide a runway of 7.1 months for their monthly outgo. This leaves a shortfall of 2.9 months, or approximately Rs 200,000, for which expenses cannot be met.\n\nAlthough an Accidental Disability Income Rider exists, it has a waiting period of 90 days, meaning no benefit will be paid for the first three months of disability <term_policy.md#5.3>. More critically, the provided policy excerpt does not specify the monthly benefit amount, making it impossible to ascertain if it would adequately cover the monthly outgo of Rs 70,000 after the waiting period.\n\nThe inability to cover monthly expenses for the full 10 months poses a direct threat to the individual's home loan. The non-payment of three consecutive EMIs, each being Rs 35,000 <loan_agreement.md#2.3>, constitutes an event of default <loan_agreement.md#6.1>. Given the 2.9-month shortfall, the individual is at high risk of missing multiple EMIs, which could lead to the lender recalling the entire outstanding amount of Rs 4,000,000 and initiating recovery against the mortgaged property <loan_agreement.md#6.2>. This clearly demonstrates a financial coverage gap.",
+      "citations": [
+        {
+          "ref": "term_policy.md#5.3",
+          "quote": "The monthly benefit commences after a waiting period of 90 days from the date of the Accident."
+        },
+        {
+          "ref": "loan_agreement.md#2.3",
+          "quote": "Equated Monthly Instalment (EMI): Rs 35,000."
+        },
+        {
+          "ref": "loan_agreement.md#6.1",
+          "quote": "Non-payment of three consecutive EMIs shall constitute an event of default."
+        },
+        {
+          "ref": "loan_agreement.md#6.2",
+          "quote": "On default, the Lender may recall the entire outstanding amount and initiate recovery against the mortgaged property."
+        }
+      ]
+    },
+    "checker": {
+      "position": "no_gap",
+      "argument": "The earning member is adequately covered for the 10-month period of inability to work due to a road accident. The total monthly outgo is Rs 70,000. For the 10-month duration, the total financial need is Rs 700,000.\n\nThe Accidental Disability Income Rider, which is in force and attached to the base policy <term_policy.md#5.1>, provides a monthly benefit of Rs 60,000 for Temporary Total Disability arising from an Accident <term_policy.md#5.2>. The scenario's cause (road accident) aligns with the rider's coverage, as it explicitly states it does not cover causes other than an Accident <term_policy.md#5.5>.\n\nHowever, this benefit commences after a waiting period of 90 days (3 months) from the date of the Accident <term_policy.md#5.3>. The benefit is payable for the duration of the Temporary Total Disability, up to a maximum of 24 months <term_policy.md#5.4>. Since the disability is for 10 months, the benefit will be paid for 7 months (10 months - 3 months waiting period).\n\n1.  **Coverage for the initial 3 months (waiting period):** The monthly outgo of Rs 70,000 for 3 months totals Rs 210,000. The individual has Rs 300,000 in liquid assets, which is sufficient to cover this period. After covering the first 3 months, Rs 90,000 (Rs 300,000 - Rs 210,000) of liquid assets remain.\n\n2.  **Coverage for the subsequent 7 months (benefit period):** For these 7 months, the Accidental Disability Income Rider will pay Rs 60,000 per month, totaling Rs 420,000 (7 months * Rs 60,000/month). The total outgo for these 7 months is Rs 490,000 (7 months * Rs 70,000/month). The rider covers Rs 420,000, leaving a shortfall of Rs 70,000 (Rs 490,000 - Rs 420,000) for this period.\n\n3.  **Closing the remaining gap:** The remaining Rs 90,000 from liquid assets is more than sufficient to cover the Rs 70,000 shortfall for the 7-month benefit period. Therefore, the individual's financial needs for the entire 10-month period are met without needing to utilize the fixed deposit or other locked assets.",
+      "citations": [
+        {
+          "ref": "term_policy.md#5.1",
+          "quote": "This rider is in force and attached to the base policy."
+        },
+        {
+          "ref": "term_policy.md#5.2",
+          "quote": "On Temporary Total Disability arising from an Accident, the Insurer will pay a monthly benefit of Rs 60,000."
+        },
+        {
+          "ref": "term_policy.md#5.3",
+          "quote": "The monthly benefit commences after a waiting period of 90 days from the date of the Accident."
+        },
+        {
+          "ref": "term_policy.md#5.4",
+          "quote": "The monthly benefit is payable for the duration of the Temporary Total Disability, up to a maximum of 24 months."
+        },
+        {
+          "ref": "term_policy.md#5.5",
+          "quote": "This rider does not cover loss of income due to illness, resignation, termination of employment, or any cause other than an Accident."
+        }
+      ]
+    },
+    "dropped_citations": {
+      "flagger": [],
+      "checker": []
+    },
+    "verdict": "confirmed",
+    "ruling": {
+      "verdict": "confirmed",
+      "justification": "The Accidental Disability Income Rider pays Rs\u202f60,000 per month only after a 90\u2011day waiting period (term_policy.md#5.3). The scenario requires Rs\u202f70,000 each month. For the first 3 months no benefit is payable, and for the remaining 7 months the rider falls short by Rs\u202f10,000 per month (Rs\u202f70,000\u202f\u2013\u202fRs\u202f60,000). This creates a shortfall of Rs\u202f30,000 (3\u202fmonths\u202f\u00d7\u202fRs\u202f70,000) plus Rs\u202f70,000 (7\u202fmonths\u202f\u00d7\u202fRs\u202f10,000) = Rs\u202f100,000 that the insurance does not cover. Hence the insurance coverage alone does not meet the financial need, confirming a coverage gap.",
+      "decisive_refs": [
+        "term_policy.md#5.2",
+        "term_policy.md#5.3",
+        "term_policy.md#5.4",
+        "term_policy.md#5.5"
+      ]
+    }
+  },
+  {
+    "run": 1,
+    "case_id": "A2",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 1,
+    "case_id": "A3",
+    "expected": "dismissed",
+    "baseline": "dismissed",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 1,
+    "case_id": "A4",
+    "expected": "dismissed",
+    "baseline": "dismissed",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 1,
+    "case_id": "A5",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 1,
+    "case_id": "B1",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 1,
+    "case_id": "B2",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 1,
+    "case_id": "B3",
+    "expected": "dismissed",
+    "baseline": "dismissed",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 1,
+    "case_id": "B4",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 1,
+    "case_id": "B5",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 1,
+    "case_id": "C1",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 1,
+    "case_id": "C2",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 1,
+    "case_id": "C3",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 1,
+    "case_id": "C4",
+    "expected": "dismissed",
+    "baseline": "dismissed",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 1,
+    "case_id": "C5",
+    "expected": "dismissed",
+    "baseline": "error",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 2,
+    "case_id": "A1",
+    "expected": "dismissed",
+    "baseline": "error",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 2,
+    "case_id": "A2",
+    "expected": "confirmed",
+    "baseline": "error",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 2,
+    "case_id": "A3",
+    "expected": "dismissed",
+    "baseline": "dismissed",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 2,
+    "case_id": "A4",
+    "expected": "dismissed",
+    "baseline": "error",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 2,
+    "case_id": "A5",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 2,
+    "case_id": "B1",
+    "expected": "confirmed",
+    "baseline": "error",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 2,
+    "case_id": "B2",
+    "expected": "confirmed",
+    "baseline": "error",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 2,
+    "case_id": "B3",
+    "expected": "dismissed",
+    "baseline": "error",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 2,
+    "case_id": "B4",
+    "expected": "confirmed",
+    "baseline": "error",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 2,
+    "case_id": "B5",
+    "expected": "confirmed",
+    "baseline": "error",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 2,
+    "case_id": "C1",
+    "expected": "confirmed",
+    "baseline": "error",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 2,
+    "case_id": "C2",
+    "expected": "confirmed",
+    "baseline": "error",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 2,
+    "case_id": "C3",
+    "expected": "confirmed",
+    "baseline": "confirmed",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 2,
+    "case_id": "C4",
+    "expected": "dismissed",
+    "baseline": "error",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  },
+  {
+    "run": 2,
+    "case_id": "C5",
+    "expected": "dismissed",
+    "baseline": "error",
+    "verdict": "error",
+    "error": "All providers failed:\ngroq: RateLimitError -> Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01kx45rme4fqsr5bdytnjxs2ae` service tier `on_demand` on tokens per day (TPD): Limit 2000\ngroq-retry: RateLimitError -> Error code: 429 - {'err"
+  }
+]

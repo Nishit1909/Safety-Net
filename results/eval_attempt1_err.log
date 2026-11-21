@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Projects\Safety-Net\outputs\eval\run_eval.py", line 113, in <module>
+    main()
+    ~~~~^^
+  File "D:\Projects\Safety-Net\outputs\eval\run_eval.py", line 69, in main
+    tr = analyze_scenario(c["scenario"], p["profile"], p["chunks"])
+  File "D:\Projects\Safety-Net\outputs\graph\build_graph.py", line 40, in analyze_scenario
+    flag, check = f_fut.result(), c_fut.result()
+                  ~~~~~~~~~~~~^^
+  File "C:\Users\nisup\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\nisup\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\nisup\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\Projects\Safety-Net\outputs\agents\agents.py", line 44, in risk_flagger
+    return call_llm(prompt, Claim, model="small", agent="flagger")
+  File "D:\Projects\Safety-Net\llm.py", line 108, in call_llm
+    raise RuntimeError("All providers failed:\n" + "\n".join(errors))
+RuntimeError: All providers failed:
+groq: BadRequestError -> Error code: 400 - {'error': {'message': "Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed'
+groq-retry: BadRequestError -> Error code: 400 - {'error': {'message': "Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed'
+gemini: ServerError -> 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}

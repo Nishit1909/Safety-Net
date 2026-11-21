@@ -1,0 +1,11 @@
+{
+  "persona_id": "persona_b", "synthetic": true, "age": 41,
+  "occupation": "Self-employed consultant", "dependents": 1,
+  "monthly_income": 90000,
+  "monthly_expenses": {"household": 30000, "rent": 20000},
+  "liquid_assets": {"savings_account": 200000},
+  "locked_assets": {"ppf": {"amount": 500000, "lock_in_until": "2031-03-31"}},
+  "obligations": {},
+  "known_conditions_note": "Type 2 diabetes diagnosed in 2023, before the health policy was bought; declared at proposal.",
+  "documents": ["health_policy.md", "term_policy.md", "rental_agreement.md"]
+}

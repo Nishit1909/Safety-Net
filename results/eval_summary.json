@@ -1,0 +1,272 @@
+{
+  "cases": 15,
+  "runs": 3,
+  "multi_agent": {
+    "accuracy": {
+      "mean": 0.289,
+      "min": 0.0,
+      "max": 0.8666666666666667
+    },
+    "false_positives": {
+      "mean": 1,
+      "min": 0,
+      "max": 2
+    },
+    "missed_gaps": {
+      "mean": 6,
+      "min": 0,
+      "max": 9
+    },
+    "by_type_per_run": [
+      {
+        "conflicting_evidence": "5/7",
+        "simple": "6/6",
+        "cross_document": "2/2"
+      },
+      {
+        "conflicting_evidence": "0/7",
+        "simple": "0/6",
+        "cross_document": "0/2"
+      },
+      {
+        "conflicting_evidence": "0/7",
+        "simple": "0/6",
+        "cross_document": "0/2"
+      }
+    ]
+  },
+  "single_agent_baseline": {
+    "accuracy": {
+      "mean": 0.667,
+      "min": 0.2,
+      "max": 0.9333333333333333
+    },
+    "false_positives": {
+      "mean": 0.667,
+      "min": 0,
+      "max": 1
+    },
+    "missed_gaps": {
+      "mean": 2.333,
+      "min": 0,
+      "max": 7
+    },
+    "by_type_per_run": [
+      {
+        "conflicting_evidence": "6/7",
+        "simple": "6/6",
+        "cross_document": "2/2"
+      },
+      {
+        "conflicting_evidence": "5/7",
+        "simple": "6/6",
+        "cross_document": "2/2"
+      },
+      {
+        "conflicting_evidence": "1/7",
+        "simple": "2/6",
+        "cross_document": "0/2"
+      }
+    ]
+  },
+  "retrieval_recall_of_key_evidence": 1.0,
+  "calls_by_agent": {
+    "checker": {
+      "calls": 16,
+      "tokens": 39229
+    },
+    "flagger": {
+      "calls": 20,
+      "tokens": 67266
+    },
+    "resolver": {
+      "calls": 16,
+      "tokens": 38366
+    },
+    "baseline": {
+      "calls": 32,
+      "tokens": 61026
+    }
+  },
+  "providers_used": {
+    "groq": 68,
+    "groq-retry": 6,
+    "gemini": 10
+  },
+  "per_run": [
+    {
+      "multi": {
+        "accuracy": 0.8666666666666667,
+        "false_positives": 2,
+        "missed_gaps": 0,
+        "errors": 0,
+        "by_type": {
+          "conflicting_evidence": "5/7",
+          "simple": "6/6",
+          "cross_document": "2/2"
+        }
+      },
+      "baseline": {
+        "accuracy": 0.9333333333333333,
+        "false_positives": 1,
+        "missed_gaps": 0,
+        "errors": 0,
+        "by_type": {
+          "conflicting_evidence": "6/7",
+          "simple": "6/6",
+          "cross_document": "2/2"
+        }
+      },
+      "multi_preds": {
+        "A1": "confirmed",
+        "A2": "confirmed",
+        "A3": "dismissed",
+        "A4": "dismissed",
+        "A5": "confirmed",
+        "B1": "confirmed",
+        "B2": "confirmed",
+        "B3": "dismissed",
+        "B4": "confirmed",
+        "B5": "confirmed",
+        "C1": "confirmed",
+        "C2": "confirmed",
+        "C3": "confirmed",
+        "C4": "dismissed",
+        "C5": "confirmed"
+      },
+      "baseline_preds": {
+        "A1": "confirmed",
+        "A2": "confirmed",
+        "A3": "dismissed",
+        "A4": "dismissed",
+        "A5": "confirmed",
+        "B1": "confirmed",
+        "B2": "confirmed",
+        "B3": "dismissed",
+        "B4": "confirmed",
+        "B5": "confirmed",
+        "C1": "confirmed",
+        "C2": "confirmed",
+        "C3": "confirmed",
+        "C4": "dismissed",
+        "C5": "dismissed"
+      }
+    },
+    {
+      "multi": {
+        "accuracy": 0.0,
+        "false_positives": 1,
+        "missed_gaps": 9,
+        "errors": 14,
+        "by_type": {
+          "conflicting_evidence": "0/7",
+          "simple": "0/6",
+          "cross_document": "0/2"
+        }
+      },
+      "baseline": {
+        "accuracy": 0.8666666666666667,
+        "false_positives": 1,
+        "missed_gaps": 0,
+        "errors": 1,
+        "by_type": {
+          "conflicting_evidence": "5/7",
+          "simple": "6/6",
+          "cross_document": "2/2"
+        }
+      },
+      "multi_preds": {
+        "A1": "confirmed",
+        "A2": "error",
+        "A3": "error",
+        "A4": "error",
+        "A5": "error",
+        "B1": "error",
+        "B2": "error",
+        "B3": "error",
+        "B4": "error",
+        "B5": "error",
+        "C1": "error",
+        "C2": "error",
+        "C3": "error",
+        "C4": "error",
+        "C5": "error"
+      },
+      "baseline_preds": {
+        "A1": "confirmed",
+        "A2": "confirmed",
+        "A3": "dismissed",
+        "A4": "dismissed",
+        "A5": "confirmed",
+        "B1": "confirmed",
+        "B2": "confirmed",
+        "B3": "dismissed",
+        "B4": "confirmed",
+        "B5": "confirmed",
+        "C1": "confirmed",
+        "C2": "confirmed",
+        "C3": "confirmed",
+        "C4": "dismissed",
+        "C5": "error"
+      }
+    },
+    {
+      "multi": {
+        "accuracy": 0.0,
+        "false_positives": 0,
+        "missed_gaps": 9,
+        "errors": 15,
+        "by_type": {
+          "conflicting_evidence": "0/7",
+          "simple": "0/6",
+          "cross_document": "0/2"
+        }
+      },
+      "baseline": {
+        "accuracy": 0.2,
+        "false_positives": 0,
+        "missed_gaps": 7,
+        "errors": 12,
+        "by_type": {
+          "conflicting_evidence": "1/7",
+          "simple": "2/6",
+          "cross_document": "0/2"
+        }
+      },
+      "multi_preds": {
+        "A1": "error",
+        "A2": "error",
+        "A3": "error",
+        "A4": "error",
+        "A5": "error",
+        "B1": "error",
+        "B2": "error",
+        "B3": "error",
+        "B4": "error",
+        "B5": "error",
+        "C1": "error",
+        "C2": "error",
+        "C3": "error",
+        "C4": "error",
+        "C5": "error"
+      },
+      "baseline_preds": {
+        "A1": "error",
+        "A2": "error",
+        "A3": "dismissed",
+        "A4": "error",
+        "A5": "confirmed",
+        "B1": "error",
+        "B2": "error",
+        "B3": "error",
+        "B4": "error",
+        "B5": "error",
+        "C1": "error",
+        "C2": "error",
+        "C3": "confirmed",
+        "C4": "error",
+        "C5": "error"
+      }
+    }
+  ]
+}

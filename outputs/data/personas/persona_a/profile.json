@@ -1,0 +1,13 @@
+{
+  "persona_id": "persona_a", "synthetic": true, "age": 34,
+  "occupation": "Salaried, private sector", "dependents": 2,
+  "monthly_income": 120000,
+  "monthly_expenses": {"household": 35000, "home_loan_emi": 35000},
+  "liquid_assets": {"savings_account": 300000},
+  "locked_assets": {
+    "fixed_deposit": {"amount": 200000, "premature_withdrawal_penalty_pct": 1.0},
+    "ppf": {"amount": 400000, "lock_in_until": "2034-03-31"}
+  },
+  "obligations": {"home_loan_outstanding": 4000000, "home_loan_tenure_remaining_months": 216},
+  "documents": ["health_policy.md", "term_policy.md", "loan_agreement.md"]
+}
